@@ -1,7 +1,6 @@
 using System;
 using System.Windows.Forms;
 using Unity;
-
 using System;
 using System.Windows.Forms;
 using Unity;
@@ -20,12 +19,7 @@ namespace WinFormsApp1
             _container = container ?? throw new ArgumentNullException(nameof(container));
         }
 
-        // ==========================================
-        // ОБРАБОТЧИКИ ДЛЯ ПУНКТОВ МЕНЮ "СПРАВОЧНИКИ"
-        // ==========================================
-
-        // ВАЖНО: Пока мы не создали сами формы (FormFaculties и т.д.), 
-        // этот код будет подчеркиваться красным. Как только создашь формы - ошибка исчезнет.
+        // обработчики для пунктов меню "справочники"
 
         private void facultyToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -43,7 +37,7 @@ namespace WinFormsApp1
         {
             try
             {
-                _container.Resolve<FormDepartments>().ShowDialog(); // <-- Вот эта строчка
+                _container.Resolve<FormDepartments>().ShowDialog(); 
             }
             catch (Exception ex)
             {
@@ -74,9 +68,7 @@ namespace WinFormsApp1
             }
         }
 
-        // ==========================================
-        // ОБРАБОТЧИКИ ДЛЯ ПУНКТОВ МЕНЮ "ОПЕРАЦИИ"
-        // ==========================================
+        // обработчики для пунктов меню "операции"
 
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {

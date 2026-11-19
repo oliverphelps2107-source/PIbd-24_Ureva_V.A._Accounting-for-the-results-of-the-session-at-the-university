@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1.Entities.Enums
 {
+    //обычное перечисление(оценки)
     public enum ExamGrade
     {
         Bad = 2,
@@ -13,7 +14,7 @@ namespace WinFormsApp1.Entities.Enums
         Good = 4,
         Excellent = 5
     }
-
+    // флаговое перечисление(статус студента,можно выбрать несколько знач. одновременно)
     [Flags]
     public enum StudentStatus
     {

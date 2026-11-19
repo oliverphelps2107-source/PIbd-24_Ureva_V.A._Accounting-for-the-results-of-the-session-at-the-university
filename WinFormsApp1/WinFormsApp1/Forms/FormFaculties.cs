@@ -9,15 +9,16 @@ namespace WinFormsApp1.Forms
 {
     public partial class FormFaculties : Form
     {
-        // 1. Объявляем поля класса (тут хранится контейнер и репозиторий)
+        // Объявляем поля класса ( хранится контейнер и репозиторий)
         private readonly IUnityContainer _container;
         private readonly IFacultyRepository _repository;
 
-        // 2. Создаем конструктор, через который Unity передаст нам зависимости
+        // внедрение зависимостей
         public FormFaculties(IUnityContainer container, IFacultyRepository repository)
         {
             InitializeComponent();
             _container = container ?? throw new ArgumentNullException(nameof(container));
+            //защита от нул
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
@@ -29,6 +30,7 @@ namespace WinFormsApp1.Forms
         private void LoadList()
         {
             dataGridViewData.DataSource = null;
+            //использование репозитория
             dataGridViewData.DataSource = _repository.ReadFaculties().ToList();
         }
 

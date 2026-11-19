@@ -63,28 +63,28 @@
             // departmentToolStripMenuItem
             // 
             departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
-            departmentToolStripMenuItem.Size = new Size(182, 26);
+            departmentToolStripMenuItem.Size = new Size(224, 26);
             departmentToolStripMenuItem.Text = "Кафедры";
             departmentToolStripMenuItem.Click += departmentToolStripMenuItem_Click;
             // 
             // facultyToolStripMenuItem
             // 
             facultyToolStripMenuItem.Name = "facultyToolStripMenuItem";
-            facultyToolStripMenuItem.Size = new Size(182, 26);
+            facultyToolStripMenuItem.Size = new Size(224, 26);
             facultyToolStripMenuItem.Text = "Факультеты";
             facultyToolStripMenuItem.Click += facultyToolStripMenuItem_Click;
             // 
             // groupToolStripMenuItem
             // 
             groupToolStripMenuItem.Name = "groupToolStripMenuItem";
-            groupToolStripMenuItem.Size = new Size(182, 26);
+            groupToolStripMenuItem.Size = new Size(224, 26);
             groupToolStripMenuItem.Text = "Группы";
             groupToolStripMenuItem.Click += groupToolStripMenuItem_Click;
             // 
             // disciplineToolStripMenuItem
             // 
             disciplineToolStripMenuItem.Name = "disciplineToolStripMenuItem";
-            disciplineToolStripMenuItem.Size = new Size(182, 26);
+            disciplineToolStripMenuItem.Size = new Size(224, 26);
             disciplineToolStripMenuItem.Text = "Дисциплины";
             disciplineToolStripMenuItem.Click += disciplineToolStripMenuItem_Click;
             // 
@@ -98,23 +98,23 @@
             // studentToolStripMenuItem
             // 
             studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            studentToolStripMenuItem.Size = new Size(220, 26);
+            studentToolStripMenuItem.Size = new Size(224, 26);
             studentToolStripMenuItem.Text = "Студенты";
             studentToolStripMenuItem.Click += studentToolStripMenuItem_Click;
             // 
             // examToolStripMenuItem
             // 
             examToolStripMenuItem.Name = "examToolStripMenuItem";
-            examToolStripMenuItem.Size = new Size(220, 26);
+            examToolStripMenuItem.Size = new Size(224, 26);
             examToolStripMenuItem.Text = "Экзамены";
             examToolStripMenuItem.Click += examToolStripMenuItem_Click;
             // 
             // sessionResultToolStripMenuItem
             // 
             sessionResultToolStripMenuItem.Name = "sessionResultToolStripMenuItem";
-            sessionResultToolStripMenuItem.Size = new Size(220, 26);
+            sessionResultToolStripMenuItem.Size = new Size(224, 26);
             sessionResultToolStripMenuItem.Text = "Результаты сессии";
-            sessionResultToolStripMenuItem.Click += facultyToolStripMenuItem_Click;
+            sessionResultToolStripMenuItem.Click += examToolStripMenuItem_Click;
             // 
             // отчётыToolStripMenuItem
             // 

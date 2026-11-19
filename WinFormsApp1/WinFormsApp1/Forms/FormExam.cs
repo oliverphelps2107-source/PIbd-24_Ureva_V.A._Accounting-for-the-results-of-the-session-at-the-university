@@ -11,23 +11,22 @@ namespace WinFormsApp1.Forms
     {
         private readonly IExamRepository _examRepository;
 
-        // Внедряем сразу 3 репозитория через конструктор
         public FormExam(IExamRepository examRepository, IStudentRepository studentRepository, IDisciplineRepository disciplineRepository)
         {
             InitializeComponent();
             _examRepository = examRepository ?? throw new ArgumentNullException(nameof(examRepository));
 
-            // Заполняем ComboBox Студентов
+            //  ComboBox Студентов
             comboBoxStudent.DataSource = studentRepository.ReadStudents().ToList();
-            comboBoxStudent.DisplayMember = "FullName"; // Показываем ФИО
-            comboBoxStudent.ValueMember = "Id";         // Значение - ID
+            comboBoxStudent.DisplayMember = "FullName"; 
+            comboBoxStudent.ValueMember = "Id";         
 
-            // Заполняем ComboBox Дисциплин
+            //  ComboBox Дисциплин
             comboBoxDiscipline.DataSource = disciplineRepository.ReadDisciplines().ToList();
-            comboBoxDiscipline.DisplayMember = "Name";  // Показываем Название
+            comboBoxDiscipline.DisplayMember = "Name";  
             comboBoxDiscipline.ValueMember = "Id";
 
-            // Заполняем ComboBox Оценок
+            //  ComboBox Оценок
             comboBoxGrade.DataSource = Enum.GetValues(typeof(ExamGrade));
         }
 
@@ -41,8 +40,8 @@ namespace WinFormsApp1.Forms
                 var exam = Exam.CreateOperation(
                     0,
                     (int)comboBoxStudent.SelectedValue,
-                    comboBoxDiscipline.Text, // Берем текст (Название дисциплины)
-                    "Преподаватель", // Для упрощения, можно тоже вытащить из репозитория
+                    comboBoxDiscipline.Text, 
+                    "Преподаватель", 
                     (ExamGrade)comboBoxGrade.SelectedItem
                 );
 

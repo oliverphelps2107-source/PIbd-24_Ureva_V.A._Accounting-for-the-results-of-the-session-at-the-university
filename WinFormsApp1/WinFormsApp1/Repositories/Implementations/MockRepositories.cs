@@ -8,7 +8,7 @@ using WinFormsApp1.Entities.Enums;
 
 namespace WinFormsApp1.Repositories.Implementations
 {
-    // --- ЗАГЛУШКИ СПРАВОЧНИКОВ ---
+    // заглушки справочников
 
     internal class FacultyRepository : IFacultyRepository
     {

@@ -8,7 +8,7 @@ using WinFormsApp1.Entities;
 
 namespace WinFormsApp1.Repositories
 {
-    // --- СПРАВОЧНИКИ (Полный CRUD) ---
+    // справочники
 
     public interface IFacultyRepository
     {
@@ -46,7 +46,7 @@ namespace WinFormsApp1.Repositories
         void DeleteDiscipline(int id);
     }
 
-    // --- СУЩНОСТИ-ОПЕРАЦИИ (Ограниченный набор) ---
+    // сущности-операции
 
     public interface IStudentRepository
     {

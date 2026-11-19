@@ -10,8 +10,8 @@ namespace WinFormsApp1.Entities
     public class Exam
     {
         public int Id { get; private set; }
-        public int StudentId { get; private set; }
-        public string DisciplineName { get; private set; } = string.Empty;
+        public int StudentId { get; private set; } //ссылка на студента( связь М:М)
+        public string DisciplineName { get; private set; } = string.Empty; //ссылка на дисциплину
         public string TeacherName { get; private set; } = string.Empty;
         public ExamGrade Grade { get; private set; }
 

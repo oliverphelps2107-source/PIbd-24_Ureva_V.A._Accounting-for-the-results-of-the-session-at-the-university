@@ -15,10 +15,9 @@ namespace WinFormsApp1.Forms
             InitializeComponent();
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
 
-            // Заполняем CheckedListBox значениями из флагового перечисления
+            // Заполнение CheckedListBox значениями из флагового перечисления
             foreach (var status in Enum.GetValues(typeof(StudentStatus)))
             {
-                // Не добавляем "None" в список, чтобы не путать пользователя
                 if ((StudentStatus)status != StudentStatus.None)
                 {
                     checkedListBoxStatus.Items.Add(status);
@@ -36,7 +35,7 @@ namespace WinFormsApp1.Forms
                 if (numericUpDownGroupId.Value <= 0)
                     throw new Exception("ID Группы должен быть больше нуля!");
 
-                // Собираем выбранные галочки обратно в один флаг
+                // собираем выбранные галочки обратно в один флаг
                 StudentStatus status = StudentStatus.None;
                 foreach (var item in checkedListBoxStatus.CheckedItems)
                 {
